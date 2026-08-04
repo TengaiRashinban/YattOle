@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Privacy Policy — YattOle</title>
+<link rel="icon" href="assets/icon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+  <div class="wrap">
+    <a href="index.html"><img src="assets/icon.svg" alt="YattOle"></a>
+    <span class="wordmark">YATTOLE</span>
+    <nav><a href="index.html">Home</a><a href="privacy.ja.html">日本語</a></nav>
+  </div>
+</header>
+
+<div class="policy">
+<h1>YattOle Privacy Policy</h1>
+<p class="meta"><strong>Effective date:</strong> July 1, 2026<br>
+<strong>Developer:</strong> Tengaira (Hideto Minegishi)<br>
+<strong>Applies to:</strong> YattOle for iPhone and Mac ("the app")</p>
+
+<p>YattOle is a personal AI — "the Other Me" — that reads real data on your own
+devices to help with your day. This policy is short because the design is
+simple: <strong>we do not collect your data. We have no servers, and nothing the app
+learns about you is ever sent to us.</strong></p>
+
+<h2>The one-sentence version</h2>
+<div class="banner">Everything YattOle knows about you lives on your devices and in your own
+private iCloud — the developer cannot see it, does not receive it, and has
+nothing to sell, share, or lose.</div>
+
+<h2>What we collect</h2>
+<p><strong>Nothing.</strong> The app has no analytics, no advertising, no tracking, no
+third-party SDKs that phone home, and no developer-operated servers. The
+app's privacy manifest declares zero collected data types and zero tracking
+domains, and its App Store privacy label reads "Data Not Collected."</p>
+
+<h2>Where your data lives</h2>
+<ul>
+<li><strong>On your devices.</strong> Conversations are processed by on-device models
+(Apple Intelligence on your iPhone and Mac, and an open-weight 27B model
+running locally on your Mac).</li>
+<li><strong>In your own iCloud.</strong> Conversations, memories, people, promises, meeting
+minutes, and settings sync between your devices through your personal
+iCloud private database (CloudKit). This database belongs to your Apple
+Account. It is encrypted in transit and at rest, and <strong>the developer has no
+access to it</strong> — technically none, not merely by policy.</li>
+<li><strong>Nowhere else.</strong> The app makes zero requests to third-party AI services.
+This is structural: there is no code path that sends your content to any
+AI service other than Apple's, described below.</li>
+</ul>
+
+<h2>On-device permissions, and what each one is for</h2>
+<p>YattOle asks permission before reading anything, and works without any
+permission you decline (it simply answers without that context).</p>
+<table>
+<tr><th>Data</th><th>How it is used</th></tr>
+<tr><td>Calendar</td><td>Read to answer schedule questions; events are created only after you confirm each one.</td></tr>
+<tr><td>Reminders</td><td>Read and created at your request, with confirmation.</td></tr>
+<tr><td>Contacts</td><td>Looked up when a task needs a person's details (e.g. resolving an address).</td></tr>
+<tr><td>Location</td><td>Used for weather and nearby places. The app keeps only a city name — never your exact coordinates.</td></tr>
+<tr><td>Microphone &amp; Speech</td><td>Meeting transcription happens entirely on your device. <strong>Audio is never recorded, saved, or uploaded.</strong></td></tr>
+<tr><td>Photos</td><td>Metadata only (dates, places, people) to answer questions like "show me last week's photos." Never modified.</td></tr>
+<tr><td>Health</td><td>Read on your device to distill a rough weekly trend; that trend never leaves your phone as numbers. Exact values (steps, sleep, blood pressure, calories) are shown only to you, in the chat, when you directly ask. YattOle never writes to Health, never stores Health data in iCloud, and never uses it for any purpose other than answering you.</td></tr>
+<tr><td>Motion &amp; Fitness</td><td>Activity type (walking, driving) is read on-device to understand your day. Raw data never leaves your phone.</td></tr>
+<tr><td>Music</td><td>Recently played items, to answer questions like "what was that song?"</td></tr>
+<tr><td>HomeKit</td><td>Accessory states are read to answer questions; accessories are operated only after you confirm.</td></tr>
+<tr><td>Focus</td><td>Checked so YattOle stays quiet while you concentrate.</td></tr>
+<tr><td>Camera</td><td>Reads text from photos you take (e.g. a wine label), on-device. The photo never leaves your device.</td></tr>
+</table>
+
+<h2>Network connections the app does make</h2>
+<p>Being honest about the few connections that exist:</p>
+<ul>
+<li><strong>Apple services.</strong> Weather comes from Apple's WeatherKit (your device
+queries Apple using its location; the app stores only the city name).
+Sync uses iCloud/CloudKit as described above. Optionally — see below —
+hard questions can use Apple's Private Cloud Compute.</li>
+<li><strong>Apple Private Cloud Compute (PCC), opt-in.</strong> If you enable "extra help,"
+the toughest questions may be processed on Apple's PCC servers, which are
+designed so that no one — not Apple staff, not the developer — can access
+your data, and independent researchers can verify that claim. If you leave
+it off, nothing ever leaves your devices. Your choice is respected per
+privacy level, and relationship data sent to any model beyond your own
+device is reduced to display names only.</li>
+<li><strong>Model download (Mac, first run).</strong> Your Mac downloads the local 27B
+model directly from a public Hugging Face repository (an Apache-2.0
+licensed open distribution). This is an ordinary file download: Hugging
+Face sees standard connection metadata (such as your IP address), and no
+personal content is sent. The download is pinned to an audited revision.</li>
+<li><strong>Links you open.</strong> Stock prices and similar open as ordinary web pages in
+your browser. Once you leave the app, the destination site's own policies
+apply.</li>
+</ul>
+
+<h2>Data retention and deletion</h2>
+<p>Your data is yours, in your iCloud, for as long as you keep it. In the app's
+settings you can erase everything YattOle has learned (Memories), and People,
+Promises (Follow-ups), and the Wine Cellar each have their own delete
+controls. Deleting the app and its iCloud data removes everything — there is
+no copy anywhere else, because the developer never had one.</p>
+
+<h2>Children</h2>
+<p>YattOle is not directed at children under 13, and we do not knowingly collect
+personal information from anyone — including children.</p>
+
+<h2>Your rights (California and elsewhere)</h2>
+<p>We do not sell or share personal information, and we do not collect it, so
+there is nothing for us to disclose, port, or delete on our side. If you have
+a question or believe this policy is inaccurate in any way, contact us and we
+will answer plainly.</p>
+
+<h2>Changes to this policy</h2>
+<p>If the app's data practices ever change, this policy will be updated here
+first, with the effective date above, before any such change ships.</p>
+
+<h2>Contact</h2>
+<p><a href="mailto:contact@tengaira.com">contact@tengaira.com</a></p>
+</div>
+
+<footer>
+  <div class="wrap">
+    <a href="index.html">YattOle</a>
+    <a href="privacy.ja.html">プライバシーポリシー (日本語)</a>
+    <span class="copy">© 2026 Tengaira (Hideto Minegishi)</span>
+  </div>
+</footer>
+
+</body>
+</html>

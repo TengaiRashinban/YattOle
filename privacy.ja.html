@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>プライバシーポリシー — YattOle</title>
+<link rel="icon" href="assets/icon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+  <div class="wrap">
+    <a href="index.html"><img src="assets/icon.svg" alt="YattOle"></a>
+    <span class="wordmark">YATTOLE</span>
+    <nav><a href="index.html">Home</a><a href="privacy.html">English</a></nav>
+  </div>
+</header>
+
+<div class="policy">
+<h1>YattOle プライバシーポリシー</h1>
+<p class="meta"><strong>発効日:</strong> 2026年7月1日<br>
+<strong>開発者:</strong> Tengaira(Hideto Minegishi)<br>
+<strong>対象:</strong> iPhone 版・Mac 版 YattOle(以下「本アプリ」)</p>
+
+<p>YattOle は、あなた自身の端末上の実データを読んで日々を手伝う、パーソナル AI
+「もう一人のオレ」です。このポリシーが短いのは、設計が単純だからです —
+<strong>開発者はあなたのデータを収集しません。開発者のサーバは存在せず、本アプリが
+あなたについて学んだことが開発者に送られることはありません。</strong></p>
+
+<h2>一文でいうと</h2>
+<div class="banner">YattOle があなたについて知るすべては、あなたの端末と、あなた自身の iCloud
+プライベートデータベースの中にあります。開発者はそれを見ることも受け取ることも
+できず、売るもの・共有するもの・漏らすものを何ひとつ持っていません。</div>
+
+<h2>収集するもの</h2>
+<p><strong>ありません。</strong> 解析 SDK・広告・トラッキング・外部に通信するサードパーティ
+SDK・開発者運営のサーバは一切ありません。プライバシーマニフェストは「収集
+データ種別ゼロ・追跡ドメインゼロ」で申告しており、App Store のプライバシー
+表示は「データは収集されません」です。</p>
+
+<h2>データの置き場所</h2>
+<ul>
+<li><strong>あなたの端末上。</strong> 会話はオンデバイスモデル(iPhone/Mac の Apple
+Intelligence と、Mac 上でローカルに動く 27B モデル)が処理します。</li>
+<li><strong>あなた自身の iCloud。</strong> 会話・記憶・人間関係・約束・議事録・設定は、
+あなたの iCloud プライベートデータベース(CloudKit)経由で端末間同期
+されます。これはあなたの Apple アカウントに属し、転送中・保存時とも
+暗号化され、<strong>開発者はアクセスできません</strong> — 方針としてではなく、
+技術的にできません。</li>
+<li><strong>それ以外の場所には置かれません。</strong> 本アプリからサードパーティ AI
+サービスへのリクエストはゼロです。これは構造的な事実です — 後述する
+Apple のサービス以外へあなたの内容を送るコード経路が存在しません。</li>
+</ul>
+
+<h2>端末上の許可と、それぞれの用途</h2>
+<p>YattOle は読む前に必ず許可を求め、断られた許可なしでも動きます(その文脈を
+持たずに答えるだけです)。</p>
+<table>
+<tr><th>データ</th><th>用途</th></tr>
+<tr><td>カレンダー</td><td>予定の質問に答えるための読み取り。予定の作成は毎回あなたの確認後のみ。</td></tr>
+<tr><td>リマインダー</td><td>あなたの依頼で読み取り・作成(確認つき)。</td></tr>
+<tr><td>連絡先</td><td>タスクに必要なとき(住所の解決など)に参照。</td></tr>
+<tr><td>位置情報</td><td>天気と近くの場所のため。保存するのは地名のみ — 正確な座標は保存しません。</td></tr>
+<tr><td>マイク・音声認識</td><td>会議の文字起こしは完全に端末内。<strong>音声は録音も保存も送信もされません。</strong></td></tr>
+<tr><td>写真</td><td>メタデータのみ(日付・場所・人物)。「先週の写真を見せて」に答えるため。変更は一切しません。</td></tr>
+<tr><td>ヘルスケア</td><td>端末内で週間トレンドに蒸留します。トレンドが数値として iPhone の外に出ることはありません。歩数・睡眠・血圧・カロリーの実数値は、あなたが直接尋ねたときにチャットであなたにだけ表示します。Health への書き込み・iCloud への保存・回答以外の利用は一切ありません。</td></tr>
+<tr><td>モーション</td><td>活動種別(徒歩・運転)を端末内で読み取り。生データは端末外に出ません。</td></tr>
+<tr><td>ミュージック</td><td>最近の再生履歴。「昨夜のあの曲は?」に答えるため。</td></tr>
+<tr><td>HomeKit</td><td>アクセサリ状態の読み取り。操作は毎回あなたの確認後のみ。</td></tr>
+<tr><td>集中モード</td><td>集中中は静かにするための確認。</td></tr>
+<tr><td>カメラ</td><td>撮った写真(ワインラベル等)の文字を端末内で読み取り。写真は端末外に出ません。</td></tr>
+</table>
+
+<h2>本アプリが行う数少ない通信</h2>
+<p>存在する通信は正直に挙げます:</p>
+<ul>
+<li><strong>Apple のサービス。</strong> 天気は Apple の WeatherKit(端末が位置情報を使って
+Apple に問い合わせ、アプリが保存するのは地名のみ)。同期は上記の
+iCloud/CloudKit。任意で、次項の Apple Private Cloud Compute。</li>
+<li><strong>Apple Private Cloud Compute(PCC、オプトイン)。</strong> 「追加の助け」を
+有効にすると、最も難しい質問が Apple の PCC サーバで処理されることが
+あります。PCC は Apple の従業員も開発者も内容にアクセスできないよう
+設計され、その主張は独立研究者が検証できます。オフのままなら、何も
+端末の外に出ません。プライバシーレベルごとに選択は尊重され、端末外の
+モデルに渡る人間関係データは表示名のみに落とされます。</li>
+<li><strong>モデルのダウンロード(Mac、初回)。</strong> あなたの Mac が、公開の Hugging
+Face リポジトリ(Apache-2.0 ライセンスの公開配布)からローカル 27B
+モデルを直接ダウンロードします。これは通常のファイルダウンロードで、
+Hugging Face には標準的な接続情報(IP アドレス等)が見えますが、個人の
+内容は送られません。取得先は監査済みのリビジョンに固定されています。</li>
+<li><strong>あなたが開くリンク。</strong> 株価などは通常の Web ページとしてブラウザで
+開きます。アプリの外に出た先は、そのサイト自身のポリシーに従います。</li>
+</ul>
+
+<h2>保持と削除</h2>
+<p>データはあなたのものとして、あなたの iCloud に、あなたが保つ限り残ります。
+設定から「YattOle が学んだことをすべて消す」(Memories)を実行でき、People・
+Promises(Follow-ups)・Wine Cellar にはそれぞれ削除操作があります。アプリと
+その iCloud データを削除すればすべて消えます — 開発者は複製を持ったことが
+ないので、他のどこにも残りません。</p>
+
+<h2>子ども</h2>
+<p>本アプリは 13 歳未満の子どもを対象としておらず、子どもを含む誰からも、
+故意に個人情報を収集することはありません。</p>
+
+<h2>あなたの権利(カリフォルニア州その他)</h2>
+<p>開発者は個人情報を販売も共有もせず、そもそも収集しないため、開示・移転・
+削除の対象になるものを持っていません。質問がある場合や、このポリシーに
+不正確な点があると思われる場合は、ご連絡ください。率直にお答えします。</p>
+
+<h2>変更</h2>
+<p>本アプリのデータの扱いが変わる場合は、その変更が出荷される前に、まずこの
+ページを冒頭の発効日とともに更新します。</p>
+
+<h2>連絡先</h2>
+<p><a href="mailto:contact@tengaira.com">contact@tengaira.com</a></p>
+</div>
+
+<footer>
+  <div class="wrap">
+    <a href="index.html">YattOle</a>
+    <a href="privacy.html">Privacy Policy (English)</a>
+    <span class="copy">© 2026 Tengaira (Hideto Minegishi)</span>
+  </div>
+</footer>
+
+</body>
+</html>
