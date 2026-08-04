@@ -1,0 +1,2 @@
+# YattOle
+iPhoneで質問してMacで回答生成してお互いに共有できるAgenticAIアプリです。
